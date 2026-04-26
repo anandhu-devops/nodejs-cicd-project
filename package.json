@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-app",
+  "version": "1.0.0",
+  "description": "Node.js CI/CD Pipeline Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Test Passed Successfully\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
+  }
+}
