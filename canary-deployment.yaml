@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-canary
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: nodejs-app
+      version: canary
+
+  template:
+    metadata:
+      labels:
+        app: nodejs-app
+        version: canary
+
+    spec:
+      containers:
+      - name: nodejs-app
+        image: anandhukdevops/nodejs:v2
+        ports:
+        - containerPort: 3000
